@@ -38,7 +38,7 @@
                   <a class="nav-link" href="/login.html">Entrar</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/">Locação</a>
+                  <a class="nav-link" href="/sistema.html">Administrar</a>
                 </li>
               </ul>
             </div>
@@ -86,14 +86,7 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="ano">Ano</label>
-                        <select id="ano" class="form-control">
-                            <option selected>Escolher...</option>
-                            <!-- Gerar os anos automaticamente -->
-                            <script>
-                                for (let year = 1995; year <= 2023; year++) {
-                                    document.write(`<option value="${year}">${year}</option>`);
-                                }
-                            </script>
+                        <input type="text" class="form-control" id="ano" placeholder="Ano">
                         </select>
                     </div>
                 </div>
@@ -121,12 +114,13 @@
                         <input type="text" class="form-control" id="peso" placeholder="Peso">
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group col-md-4">
                     <label for="situacao">Situação</label>
                     <input type="text" class="form-control" id="situacao" placeholder="Situação">
                 </div>
                 <br><br>
                 <button type="submit" class="btn btn-dark">cadastrar</button>
+                <button type="submit" class="btn btn-dark">cancelar</button>
             </form>
         </div>
     </div>
