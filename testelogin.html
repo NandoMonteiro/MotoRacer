@@ -1,24 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cadastro de Usuário</title>
+  <title>CRUD de Usuário</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      background-color: #f8f9fa;
-    }
-
-    .container {
-      max-width: 400px;
-      margin-top: 100px;
-    }
-  </style>
 </head>
 <body>
-  
   <div class="container bg-white p-4 rounded">
     <h2 class="text-center mb-4">Cadastro de Usuário</h2>
-    <form>
+    <form id="crudForm">
       <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
@@ -28,6 +17,14 @@
         <input type="email" class="form-control" id="email" placeholder="Digite o email">
       </div>
       <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="tel" class="form-control" id="telefone" placeholder="Digite o telefone">
+      </div>
+      <div class="form-group">
+        <label for="endereco">Endereço</label>
+        <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço">
+      </div>
+      <div class="form-group">
         <label for="senha">Senha</label>
         <input type="password" class="form-control" id="senha" placeholder="Digite a senha">
       </div>
@@ -35,10 +32,28 @@
         <label for="confirmaSenha">Confirmação de Senha</label>
         <input type="password" class="form-control" id="confirmaSenha" placeholder="Confirme a senha">
       </div>
-      <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+      <br>
+      <button type="submit" class="btn btn-dark">Cadastrar</button>
+      <button type="button" class="btn btn-dark" onclick="cancelarCadastro()">Cancelar</button>
     </form>
+
+    <table class="table mt-4">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Endereço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="usuariosTableBody">
+        <!-- Os usuários serão adicionados dinamicamente aqui -->
+      </tbody>
+    </table>
   </div>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="crud.js"></script>
 </body>
 </html>
